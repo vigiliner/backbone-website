@@ -1,0 +1,130 @@
+.privacy-check {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.cta-area {
+    margin-top: 0;
+}
+
+.btn-solid.subscribe-btn {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 15px;
+    /* Opcional: ajusta el tamaño del texto */
+    line-height: 1.1;
+}
+
+/* Header sticky (fondo azul al hacer scroll) en modo claro → texto y logo blancos */
+body.light-theme .is-sticky.header-basic a,
+body.light-theme .is-sticky.header-basic .menu-link {
+    color: #ffffff !important;
+}
+
+body.light-theme .is-sticky.header-basic a::before,
+body.light-theme .is-sticky.header-basic .menu-link::before {
+    background-color: #ffffff !important;
+}
+
+body.light-theme .is-sticky.header-basic .controls-box .header-search-btn {
+    color: #ffffff !important;
+}
+
+body.light-theme .is-sticky.header-basic .header-logo .logo-img.dark-logo {
+    display: none !important;
+}
+
+body.light-theme .is-sticky.header-basic .header-logo .logo-img.light-logo {
+    display: block !important;
+}
+
+/* Fix header en subpáginas con modo claro (sin hero oscuro de fondo) */
+body.light-theme .header-basic.inner-page-header a,
+body.light-theme .header-basic.inner-page-header .menu-link {
+    color: #000000 !important;
+}
+
+body.light-theme .header-basic.inner-page-header a::before,
+body.light-theme .header-basic.inner-page-header .menu-link::before {
+    background-color: #060922 !important;
+}
+
+body.light-theme .header-basic.inner-page-header .controls-box .header-search-btn {
+    color: #000000 !important;
+}
+
+body.light-theme .header-basic.inner-page-header .header-logo .logo-img.light-logo {
+    display: none !important;
+}
+
+body.light-theme .header-basic.inner-page-header .header-logo .logo-img.dark-logo {
+    display: block !important;
+}
+
+/* Fix header en subpáginas con modo claro (sin hero oscuro de fondo) */
+body.light-theme .header-basic.inner-page-header a,
+body.light-theme .header-basic.inner-page-header .menu-link {
+    color: #000000 !important;
+}
+
+body.light-theme .header-basic.inner-page-header a::before,
+body.light-theme .header-basic.inner-page-header .menu-link::before {
+    background-color: #060922 !important;
+}
+
+body.light-theme .header-basic.inner-page-header .controls-box .header-search-btn {
+    color: #000000 !important;
+}
+
+body.light-theme .header-basic.inner-page-header .header-logo .logo-img.light-logo {
+    display: none !important;
+}
+
+body.light-theme .header-basic.inner-page-header .header-logo .logo-img.dark-logo {
+    display: block !important;
+}
+
+/* Subpáginas sticky + modo claro → logo blanco y texto blanco */
+body.light-theme .is-sticky.header-basic.inner-page-header a,
+body.light-theme .is-sticky.header-basic.inner-page-header .menu-link {
+    color: #ffffff !important;
+}
+
+body.light-theme .is-sticky.header-basic.inner-page-header a::before,
+body.light-theme .is-sticky.header-basic.inner-page-header .menu-link::before {
+    background-color: #ffffff !important;
+}
+
+body.light-theme .is-sticky.header-basic.inner-page-header .controls-box .header-search-btn {
+    color: #ffffff !important;
+}
+
+body.light-theme .is-sticky.header-basic.inner-page-header .header-logo .logo-img.dark-logo {
+    display: none !important;
+}
+
+body.light-theme .is-sticky.header-basic.inner-page-header .header-logo .logo-img.light-logo {
+    display: block !important;
+}
+
+/* Ocultar hero slider en subpáginas */
+.hero-subpage-hidden {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.services-row > [class*="col"] {
+    display: flex;
+}
+
+.services-row .service-box {
+    width: 100%;
+}

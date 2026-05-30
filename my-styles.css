@@ -1,0 +1,314 @@
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 90px; /* encima del back-to-top */
+  right: 30px;
+  z-index: 9999;
+  background: #25d366;
+  color: #fff;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.whatsapp-float:hover {
+  background: #128c7e;
+}
+.whatsapp-float .icon {
+  font-size: 2rem;
+}
+
+.services-row > [class*="col"] {
+    display: flex;
+}
+
+.services-row .service-box {
+    width: 100%;
+}
+
+/* Header sticky (fondo azul al hacer scroll) en modo claro → texto y logo blancos */
+body.light-theme .is-sticky.header-basic a,
+body.light-theme .is-sticky.header-basic .menu-link {
+    color: #ffffff !important;
+}
+
+body.light-theme .is-sticky.header-basic a::before,
+body.light-theme .is-sticky.header-basic .menu-link::before {
+    background-color: #ffffff !important;
+}
+
+body.light-theme .is-sticky.header-basic .controls-box .header-search-btn {
+    color: #ffffff !important;
+}
+
+body.light-theme .is-sticky.header-basic .header-logo .logo-img.dark-logo {
+    display: none !important;
+}
+
+body.light-theme .is-sticky.header-basic .header-logo .logo-img.light-logo {
+    display: block !important;
+}
+
+/* Subpáginas sticky + modo claro → logo blanco y texto blanco */
+body.light-theme .is-sticky.header-basic.inner-page-header a,
+body.light-theme .is-sticky.header-basic.inner-page-header .menu-link {
+    color: #ffffff !important;
+}
+
+body.light-theme .is-sticky.header-basic.inner-page-header a::before,
+body.light-theme .is-sticky.header-basic.inner-page-header .menu-link::before {
+    background-color: #ffffff !important;
+}
+
+body.light-theme .is-sticky.header-basic.inner-page-header .controls-box .header-search-btn {
+    color: #ffffff !important;
+}
+
+body.light-theme .is-sticky.header-basic.inner-page-header .header-logo .logo-img.dark-logo {
+    display: none !important;
+}
+
+body.light-theme .is-sticky.header-basic.inner-page-header .header-logo .logo-img.light-logo {
+    display: block !important;
+}
+
+/* Fix header en subpáginas con modo claro */
+body.light-theme .header-basic.inner-page-header a,
+body.light-theme .header-basic.inner-page-header .menu-link {
+    color: #000000 !important;
+}
+
+body.light-theme .header-basic.inner-page-header a::before,
+body.light-theme .header-basic.inner-page-header .menu-link::before {
+    background-color: #000000 !important;
+}
+
+body.light-theme .header-basic.inner-page-header .controls-box .header-search-btn {
+    color: #000000 !important;
+}
+
+body.light-theme .header-basic.inner-page-header .header-logo .logo-img.light-logo {
+    display: none !important;
+}
+
+body.light-theme .header-basic.inner-page-header .header-logo .logo-img.dark-logo {
+    display: block !important;
+}
+
+/* Ocultar hero slider en subpáginas */
+.hero-subpage-hidden {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Oficina horizontal card */
+.info-panel-horizontal {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    border: 1px solid rgba(30, 144, 255, 0.25);
+    border-left: 4px solid #1e90ff;
+    border-radius: 14px;
+    padding: 2.5rem 3rem;
+    flex-wrap: wrap;
+}
+
+.hcard-location {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    flex: 1.2;
+    min-width: 180px;
+}
+
+.hcard-map-icon .font-icon {
+    font-size: 2.2rem;
+    color: #1e90ff;
+    margin-top: 4px;
+    display: block;
+}
+
+.hcard-divider {
+    width: 1px;
+    height: 90px;
+    background: rgba(30, 144, 255, 0.25);
+    flex-shrink: 0;
+}
+
+.hcard-contact {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    min-width: 190px;
+    overflow: hidden;
+}
+
+.hcard-contact .card-content {
+    overflow: hidden;
+}
+
+.hcard-contact .email,
+.hcard-contact .tel {
+    white-space: nowrap;
+    display: block;
+}
+
+.hcard-icon {
+    font-size: 1.8rem;
+    color: #1e90ff;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .info-panel-horizontal {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem 1.5rem;
+    }
+    .hcard-divider {
+        width: 100%;
+        height: 1px;
+    }
+}
+
+/* ── Mapa split layout ── */
+.map-split-layout {
+    display: flex;
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 480px;
+    border: 1px solid rgba(30, 144, 255, 0.2);
+}
+
+.map-info-side {
+    flex: 0 0 340px;
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    border-right: 1px solid rgba(30, 144, 255, 0.2);
+}
+
+.map-pretitle {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1e90ff;
+    font-weight: 600;
+}
+
+.map-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #fff;
+    margin: 0;
+}
+
+.map-title-accent {
+    color: #1e90ff;
+}
+
+.map-info-divider {
+    width: 48px;
+    height: 3px;
+    background: #1e90ff;
+    border-radius: 2px;
+}
+
+.map-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.map-info-icon {
+    font-size: 1.3rem;
+    color: #1e90ff;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.map-info-label {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1e90ff;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+.map-info-text {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.map-info-link {
+    color: #ccc;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.map-info-link:hover {
+    color: #1e90ff;
+}
+
+.map-directions-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding: 0.65rem 1.4rem;
+    border: 1px solid #1e90ff;
+    border-radius: 8px;
+    color: #1e90ff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    align-self: flex-start;
+}
+
+.map-directions-btn:hover {
+    background: #1e90ff;
+    color: #fff;
+}
+
+.map-iframe-side {
+    flex: 1;
+    min-height: 480px;
+}
+
+.map-iframe-side iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .map-split-layout {
+        flex-direction: column;
+    }
+    .map-info-side {
+        flex: none;
+        border-right: none;
+        border-bottom: 1px solid rgba(30, 144, 255, 0.2);
+    }
+    .map-iframe-side {
+        min-height: 300px;
+    }
+}
