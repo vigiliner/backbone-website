@@ -400,6 +400,59 @@ $(function () {
 
   /*************End Contact Form Functionality************/
 
+  /*************Start Footer Email Form Functionality************/
+  $(".one-field-form").on("submit", function (e) {
+    e.preventDefault();
+    const form = $(this);
+    const emailInput = form.find(".email-input");
+    const emailNotice = form.find(".email-notice");
+    const submitBtn = form.find(".subscribe-btn");
+    const privacyCheck = form.find("input[name='privacy-policy']");
+
+    if (privacyCheck.length && !privacyCheck.is(":checked")) {
+      emailNotice.text("Debes aceptar la Política de Privacidad.").css("color", "#e74c3c");
+      return false;
+    }
+
+    const emailVal = emailInput.val().trim();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(emailVal)) {
+      emailNotice.text("Por favor ingresa un correo válido.").css("color", "#e74c3c");
+      return false;
+    }
+
+    submitBtn.prop("disabled", true).val("Enviando...");
+
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({
+        access_key: "78ac0860-9b14-4156-a5f8-1d605c13689f",
+        subject: "Nueva suscripción de correo - Grupo BackBone",
+        from_name: "Formulario Footer BackBone",
+        email: emailVal
+      })
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        if (data.success) {
+          emailNotice.text("¡Gracias! Nos pondremos en contacto contigo.").css("color", "#2ecc71");
+          emailInput.val("");
+          if (privacyCheck.length) privacyCheck.prop("checked", false);
+        } else {
+          emailNotice.text("Ocurrió un error. Intenta de nuevo.").css("color", "#e74c3c");
+        }
+        submitBtn.prop("disabled", false).val("Enviar");
+      })
+      .catch(function () {
+        emailNotice.text("Error de conexión. Intenta de nuevo más tarde.").css("color", "#e74c3c");
+        submitBtn.prop("disabled", false).val("Enviar");
+      });
+
+    return false;
+  });
+  /*************End Footer Email Form Functionality************/
+
   /* ---------------------------------- 
     Start Vendors plugins options Area 
     ---------------------------------- */
